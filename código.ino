@@ -41,8 +41,8 @@ void loop() {
   // Evia os dados ao thingSpeak
   dadosThingSpeak(ldrValue,temp,humi);
  
-  // delay leve de 15 segundos
-  delay(15000);
+  // delay leve de 10 segundos
+  delay(10000);
 }
  
 void connectWiFi() {
