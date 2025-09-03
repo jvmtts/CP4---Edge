@@ -62,20 +62,20 @@ void dadosThingSpeak(int value, int temperatura, int umidade) {
  
   String url = "http://api.thingspeak.com/update?api_key=" + String(apiKey) + "&field1=" + String(value) + "&field2=" + String(temperatura) + "&field3=" + String(umidade);
  
-  Serial.println("Sending data to ThingSpeak...");
+  Serial.println("Enviando dados ao ThingSpeak");
   Serial.println(url);
  
   if (http.begin(url)) {
     int httpResponseCode = http.GET();
     if (httpResponseCode == 200) {
-      Serial.println("Data sent successfully to ThingSpeak!");
+      Serial.println("Dados enviados ao ThingSpeak");
     } else {
-      Serial.print("Error in sending data. HTTP Response code: ");
+      Serial.print("Erro. segue httpResponse ");
       Serial.println(httpResponseCode);
     }
     http.end();
   } else {
-    Serial.println("Error in HTTP begin.");
+    Serial.println("Erro na inicialização http");
   }
 }
  
